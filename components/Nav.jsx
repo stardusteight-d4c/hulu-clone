@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useState } from 'react'
 import { requests } from '../utils/requests'
 
 const Nav = () => {
   const router = useRouter()
+  const [activeItem, setActiveItem] = useState('')
 
   return (
     <nav className="relative">
@@ -11,8 +12,12 @@ const Nav = () => {
         {Object.entries(requests).map(([key, { title, url }]) => (
           <h2
             key={key}
-            onClick={() => router.push(`/?genre=${key}`)}
-            className="transition duration-100 transform cursor-pointer last:pr-24 hover:scale-125 hover:text-white active:text-green-500"
+            onClick={() =>
+              router.push(`/?genre=${key}`) && setActiveItem(title)
+            }
+            className={`transition duration-100 transform cursor-pointer last:pr-24 hover:scale-125 hover:text-green-500 active:text-green-500 ${
+              activeItem == title && 'text-green-500' 
+            }`}
           >
             {title}
           </h2>
