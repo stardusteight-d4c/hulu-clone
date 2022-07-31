@@ -6,3 +6,12 @@ html,
 body {
   @apply font-rubik antialiased scroll-smooth bg-[#06202A] text-gray-300;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 20px;
+}
