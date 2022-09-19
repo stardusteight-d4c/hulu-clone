@@ -94,7 +94,7 @@ export const requests = {
 }
 ```
 
-- query: `https://hulu-clone-tawny-nine.vercel.app/?genre=fetchTrending`
+- <strong>Query</strong>: `?genre=fetchTrending`
 
 ```js
 // terminal output
