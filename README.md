@@ -2,4 +2,5 @@
 
 ![banner](banner.png)
 
-> Once again practicing API Requests and Next.js with `Sonny Sangha`, the Next.js Server-side Rendering Feature was used in this project, in which the asyncrona function getServerSideProps is called by the server on each request, so if a page uses server-side rendering, the page's HTML is generated on every request. With the react-flip-move library, it is possible to add transition animations in the rendering of the components of the results.
+> In this project I used the `getServerSideProps` function which makes Next.js `pre-render` the page on each request using the data returned by getServerSideProps, and is only executed on the server side. Inside `utils` there is a Javascript object in which there is all the data necessary to make the necessary requests using the Fetch API according to the genre sent `through the url query`. The base project was taught on the <strong>Sonny Sangha</strong> channel.
+
